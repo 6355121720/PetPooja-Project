@@ -24,7 +24,7 @@ router.post('/getgood', upload.single('image'), async (req, res) => {
             body: JSON.stringify({
                 contents: [{
                     parts: [
-                        { text: "Identiy fruits and vegetables for only who are good and not spoiled and give items,quantity(strictly only in numbers) in form of item,quantity and only give this response not anything else" },
+                        { text: "Identiy fruits and vegetables for only who are good and not spoiled and give items,quantity(strictly only in numbers) in form of item,quantity and only give this response not anything else, ensuring item names are singular" },
                         { inlineData: { mimeType: mimeType, data: base64Image } }
                     ]
                 }]
@@ -77,7 +77,7 @@ router.post('/getbad', upload.single('image'), async (req, res) => {
             body: JSON.stringify({
                 contents: [{
                     parts: [
-                        { text: "Identiy fruits and vegetables for only which are spoiled(rotten) and give items:quantity in form of item,quantity(strictly only in numbers) and only give this response not anything else" },
+                        { text: "Identiy fruits and vegetables for only which are spoiled(rotten) and give items:quantity in form of item,quantity(strictly only in numbers) and only give this response not anything else  ensuring item names are singular" },
                         { inlineData: { mimeType: mimeType, data: base64Image } }
                     ]
                 }]
